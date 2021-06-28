@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+
+  postgres-btm-team1-local:
+    image: postgres:12
+    container_name: postgres-btm-team1-local
+    restart: on-failure
+    environment:
+      POSTGRES_DB: btm
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres/data
+
+#- ./data/postgres/data:/var/lib/postgresql/data
