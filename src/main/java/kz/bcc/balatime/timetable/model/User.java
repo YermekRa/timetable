@@ -14,8 +14,7 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Setter
-@Getter
+@Data
 public class User implements UserDetails {
     @Id
     @SequenceGenerator(name = "user_id_seq",

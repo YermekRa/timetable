@@ -2,18 +2,15 @@ package kz.bcc.balatime.timetable.model;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Table(name = "teacher_subj", schema = "public")
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Setter
-@Getter
+@Data
 public class TeacherSubj {
     @Id
     @Column(name = "teacher_id")

@@ -9,8 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Setter
-@Getter
+@Data
 public class Classs {
     @Id
     @SequenceGenerator(name = "class_id_seq",

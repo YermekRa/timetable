@@ -10,8 +10,7 @@ import java.sql.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Setter
-@Getter
+@Data
 public class Teacher {
     @Id
     @SequenceGenerator(name = "teacher_id_seq",

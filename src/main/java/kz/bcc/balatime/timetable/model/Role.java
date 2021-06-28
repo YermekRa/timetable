@@ -11,8 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Setter
-@Getter
+@Data
 public class Role implements GrantedAuthority {
     @Id
     @SequenceGenerator(name = "role_id_seq",
