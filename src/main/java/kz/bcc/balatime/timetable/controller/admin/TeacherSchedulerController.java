@@ -17,7 +17,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value = "/teacher_scheduler", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/teacher/scheduler", produces = APPLICATION_JSON_VALUE)
 public class TeacherSchedulerController {
     @Autowired
     TeacherSchedulerService teacherSchedulerService;
@@ -26,8 +26,9 @@ public class TeacherSchedulerController {
     @GetMapping("/all")
     public ResponseEntity<List<SchedulerRow>> getAll(
             @RequestParam EduYear eduYear,
-            Principal principal
+            @RequestParam String login
     ) {
-        return ResponseEntity.ok(teacherSchedulerService.getAll(principal.getName(), eduYear));
+        System.out.println(eduYear);
+        return ResponseEntity.ok(teacherSchedulerService.getAll(login, eduYear));
     }
 }
