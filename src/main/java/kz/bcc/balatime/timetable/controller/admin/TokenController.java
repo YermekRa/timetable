@@ -19,6 +19,7 @@ public class TokenController {
     @GetMapping("/current")
     public ResponseEntity<String> getCurrent1(Principal principal) {
         System.out.println("Current User");
+        System.out.println(principal);
         return ResponseEntity.ok(new Gson().toJson(principal));
     }
 

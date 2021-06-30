@@ -17,7 +17,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping(value = "/teacher/scheduler", produces = APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/teacher_scheduler", produces = APPLICATION_JSON_VALUE)
 public class TeacherSchedulerController {
     @Autowired
     TeacherSchedulerService teacherSchedulerService;
